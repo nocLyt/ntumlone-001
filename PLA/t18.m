@@ -1,3 +1,11 @@
+%{
+	T18  0.13310
+	T19  0.27045
+	T20
+%}
+clear ; close all; clc
+fprintf('Loading ...\n')
+
 ST= cputime;
 
 data= load('1_18_train.dat.txt');
@@ -14,9 +22,11 @@ testy= data(:,5);
 n= size(X,2);			% number of features	
 
 %% Random Cycle
-cnt= 1;		% number of cycle
+cnt= 2000;		% number of cycle
 sum= 0;		% sum of test error
 for times= 1:cnt
+	fprintf('Training  %d-th times  ...\n',times)
+	pause;
 	% Make a random permutation
 	[tmpX tmpy]= randomPer(X,y);
 	% Do Pocket
@@ -24,6 +34,7 @@ for times= 1:cnt
 
 	% Cal Test Error
 	sum+= PLATest(testX, testy, wp, 1);
+
 end
 sum= (cnt*testm-sum)/(cnt*testm)
 
