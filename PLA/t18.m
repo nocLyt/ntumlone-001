@@ -14,7 +14,7 @@ testy= data(:,5);
 n= size(X,2);			% number of features	
 
 %% Random Cycle
-cnt= 2000;		% number of cycle
+cnt= 1;		% number of cycle
 sum= 0;		% sum of test error
 for times= 1:cnt
 	% Make a random permutation

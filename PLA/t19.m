@@ -21,7 +21,7 @@ for times= 1:cnt
 	[tmpX tmpy]= randomPer(X,y);
 	
 	% Do 
-	[tmp w]= PLAUnLS(tmpX, tmpy, zeros(n,1), 1, 50);
+	[tmp w]= PLAUnLS(tmpX, tmpy, zeros(n,1), 1, 100);
 
 	% Cal Test Error
 	sum+= PLATest(testX, testy, w, 1);

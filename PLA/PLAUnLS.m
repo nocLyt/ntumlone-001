@@ -1,5 +1,7 @@
 % PLA of  Can't Linear Separable
+% The function will iterate TIMES times
 
+% return
 % cnt is the number of update
 % w is the w when iterate TIMES times
 
