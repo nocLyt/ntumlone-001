@@ -8,7 +8,7 @@
 data= load('1_15.txt');
 m= size(data,1);		% number of training set
 X= data(:,1:4);			% Training data
-y= data(:,5:5);			
+y= data(:,5:5);	
 X= [ones(m,1) X];
 n= size(X,2);			% number of features
 w= zeros(n,1);	
